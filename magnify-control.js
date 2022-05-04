@@ -1,8 +1,16 @@
 class MagnifyTextControl {
 
-    constructor(textLayers = [], magnificationFactor = 2) {
-      this._textLayers = textLayers;
-      this._magnificationFactor = magnificationFactor;
+    constructor(options = {}) {
+      if(options.textLayers) {
+        this.textLayers = options.textLayers;
+      } else {
+        this.textLayers = 2;
+      }
+      if(options.magnificationFactor) {
+        this.magnificationFactor = options.magnificationFactor;
+      } else {
+        this.magnificationFactor = 2;
+      }
       this._isMagnified = false;
     }
 
@@ -24,6 +32,12 @@ class MagnifyTextControl {
               let newExpression = that.recursiveMagnificationLoop(textSizeExpression);
               map.setLayoutProperty(layer.id, 'text-size', newExpression);
             }
+          })
+        } else {
+          that._textLayers.forEach(layerID => {
+            const textSizeExpression = map.getLayoutProperty(layerID, 'text-size');
+            let newExpression = that.recursiveMagnificationLoop(textSizeExpression);
+            map.setLayoutProperty(layerID, 'text-size', newExpression);
           })
         }
         that._isMagnified = !that._isMagnified;
