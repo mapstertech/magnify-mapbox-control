@@ -4,7 +4,7 @@ class MagnifyTextControl {
       if(options.textLayers) {
         this.textLayers = options.textLayers;
       } else {
-        this.textLayers = 2;
+        this.textLayers = [];
       }
       if(options.magnificationFactor) {
         this.magnificationFactor = options.magnificationFactor;
