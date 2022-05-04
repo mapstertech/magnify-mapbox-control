@@ -20,6 +20,7 @@ This is a control meant to help with accessibility for people who have vision im
         style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
     });
 
+    map.addControl(new MagnifyTextControl());
 </script>
 
 ### Usage
