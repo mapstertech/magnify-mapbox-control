@@ -11,7 +11,7 @@ This is a control meant to help with accessibility for people who have vision im
     <div id="map" style="width:100%;height:400px;"></div>
 </div>
 
-<script src='https://raw.githubusercontent.com/mapstertech/magnify-mapbox-control/master/magnify-control.js'></script>
+<script src='magnify-control.js'></script>
 <script type="text/javascript">
 
     mapboxgl.accessToken = 'pk.eyJ1IjoibWFwc3RlcnRlY2giLCJhIjoiY2wyczBnMTdqMGN4MzNqcXIzcDd3b2N2bSJ9.T6kh8D0RQZCATrQvglZwcA';
