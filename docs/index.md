@@ -17,7 +17,7 @@ This is a control meant to help with accessibility for people who have vision im
     mapboxgl.accessToken = 'pk.eyJ1IjoibWFwc3RlcnRlY2giLCJhIjoiY2wyczBnMTdqMGN4MzNqcXIzcDd3b2N2bSJ9.T6kh8D0RQZCATrQvglZwcA';
     var map = new mapboxgl.Map({
         container: 'map', // container id
-        style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
+        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
         center: [-74.5, 40], // starting position [lng, lat]
         zoom: 9 // starting zoom
     });
