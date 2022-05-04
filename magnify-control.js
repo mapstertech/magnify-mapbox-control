@@ -24,7 +24,7 @@ class MagnifyTextControl {
       this._btn.innerHTML = "&#128269;"
       this._btn["aria-label"] = "Toggle Text Magnification";
       this._btn.onclick = function() {
-        if(that._textLayers.length === 0) {
+        if(that.textLayers.length === 0) {
           const symbolLayers = map.getStyle().layers.filter(layer => layer.type === 'symbol');
           symbolLayers.forEach(layer => {
             if(layer.layout['text-size']) {
@@ -34,7 +34,7 @@ class MagnifyTextControl {
             }
           })
         } else {
-          that._textLayers.forEach(layerID => {
+          that.textLayers.forEach(layerID => {
             const textSizeExpression = map.getLayoutProperty(layerID, 'text-size');
             let newExpression = that.recursiveMagnificationLoop(textSizeExpression);
             map.setLayoutProperty(layerID, 'text-size', newExpression);
@@ -63,9 +63,9 @@ class MagnifyTextControl {
           return expressionPart;
         } else {
           if(this._isMagnified) {
-            return expressionPart / this._magnificationFactor;
+            return expressionPart / this.magnificationFactor;
           } else {
-            return expressionPart * this._magnificationFactor;
+            return expressionPart * this.magnificationFactor;
           }
         }
       }
