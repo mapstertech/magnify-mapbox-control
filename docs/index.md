@@ -13,7 +13,7 @@ This is a control meant to help with accessibility for people who have vision im
 
 <script type="text/javascript">
 
-    mapboxgl.accessToken = 'pk.eyJ1IjoidGVtcHJhbm92YSIsImEiOiJjaWd0c3M2MW4wOHI2dWNrbzZ5dWo1azVjIn0.x5sm8OjRxO9zO_uUmxYEqg';
+    mapboxgl.accessToken = 'pk.eyJ1IjoibWFwc3RlcnRlY2giLCJhIjoiY2wyczBnMTdqMGN4MzNqcXIzcDd3b2N2bSJ9.T6kh8D0RQZCATrQvglZwcA';
     var map = new mapboxgl.Map({
         container: 'map', // container id
         style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
