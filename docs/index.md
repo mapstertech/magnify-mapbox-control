@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+    
+## Magnify Mapbox Control
 
-You can use the [editor on GitHub](https://github.com/mapstertech/magnify-mapbox-control/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+This is a control meant to help with accessibility for people who have vision impairments and wish to be able to see elements more clearly on Mapbox maps. You can easily add this control and customize the amount of magnification it allows.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Example
 
-### Markdown
+<div>
+    <div id="map" style="width:100%;height:400px;"></div>
+</div>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<script type="text/javascript">
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mapstertech/magnify-mapbox-control/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+    mapboxgl.accessToken = 'pk.eyJ1IjoidGVtcHJhbm92YSIsImEiOiJjaWd0c3M2MW4wOHI2dWNrbzZ5dWo1azVjIn0.x5sm8OjRxO9zO_uUmxYEqg';
+    var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
+    });
+  
+</script>
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Having any trouble? Get in touch with us at [https://mapster.me](https://mapster.me).
