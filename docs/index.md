@@ -18,6 +18,8 @@ This is a control meant to help with accessibility for people who have vision im
     var map = new mapboxgl.Map({
         container: 'map', // container id
         style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
+        center: [-74.5, 40], // starting position [lng, lat]
+        zoom: 9 // starting zoom
     });
 
     map.addControl(new MagnifyTextControl());
